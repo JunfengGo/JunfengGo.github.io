@@ -1,483 +1,645 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<!-- saved from url=(0026)https://anglili.github.io/ -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Homepage of Junfeng Guo at the University of Maryland, College park</title>
-        <meta name="author" content="Junfeng Guo"> 
-	<meta name="description" content="Junfeng Guo is a Research Fellow at the University of Maryland, College park under the supervision of Professor, Heng Huang. He received his Ph.D at UTDallas, working with Dr.Cong Liu and Dr.Ang Li. He received his BS from UESTC. His research interests are in Computer Vision and Adversarial Machine Learning.">
-	<meta name="google-site-verification" content="x1_lSar01tFVnRrQufhjNGMVH24WmWaunO46_qmN9mk" />
-        <link href="./Junfeng/css" rel="stylesheet"> 
-        <!--<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Oswald:400,700' rel='stylesheet' type='text/css'>-->
-        <link href="./Junfeng/style.css" rel="stylesheet">
-        <script type="text/javascript" async="" src="./Junfeng/ga.js.download"></script><script>
-            function showbib(tag) {
-                var x = document.getElementById(tag);
-                if (x.style.display == "block")
-                    x.style.display = "none";
-                else x.style.display = "block";
-            }
-        </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junfeng Guo — University of Maryland</title>
+    <meta name="description" content="Junfeng Guo is a Research Associate at the University of Maryland, College Park. Research in Trustworthy ML, Computer Vision, and Security.">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FAFAF7;
+            --surface: #FFFFFF;
+            --text: #1A1A1A;
+            --text-secondary: #555;
+            --accent: #B8242A;
+            --accent-light: #FDF2F2;
+            --border: #E8E6E1;
+            --tag-bg: #F0EFEC;
+            --serif: 'EB Garamond', Georgia, serif;
+            --sans: 'DM Sans', system-ui, sans-serif;
+            --radius: 6px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+            --max-w: 820px;
+        }
 
-    </head>
-    <body data-new-gr-c-s-check-loaded="14.1019.0" data-gr-ext-installed="">
-        <div id="main">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-            <div style="padding-top: 10px">
-                <img src="junfeng.jpg" style="float: left; height:190px; margin-right: 30px; margin-top: 8px" />
-                <!--<embed type="image/svg+xml" src="pic/umdlogo.svg" style="height: 40px; width: 300px; float: right; padding-top:10px; padding-bottom: 10px;" /> -->
-                <!-- <img src="pic/umdseal.png" style="height: 130px; float: right; padding-top:10px; padding-bottom: 10px;" /> -->
-                <div>
-                    <div class="name">Junfeng Guo (国珺峰)</div>
-                    <p> Research Associate<br>The University of Maryland at College Park, Maryland
-		    </p><p>Research Associate<br>University of Maryland, College Park<br>gjf2023 at umd dot edu
-                    </p><p><a class="link" href="mailto:gjf199509236817@gmail.com">Gmail</a><!--<a class="cv" href="resume-angli.pdf">Resume</a> -->&nbsp;&nbsp;&nbsp;
-                    <a class="link" href="https://twitter.com/Junfeng27879808">Twitter</a>&nbsp;&nbsp;&nbsp;<a class="link" href="https://scholar.google.co.jp/citations?user=TqblqYcAAAAJ&hl=ja">Google Scholar</a>
-                    <br><br>
-                </p></div>
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+        a:hover { opacity: 0.75; }
+
+        /* ── Header ── */
+        .header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
+        .header-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 48px 24px 44px;
+            display: flex;
+            gap: 36px;
+            align-items: flex-start;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            flex-shrink: 0;
+        }
+        .header-info { flex: 1; }
+        .header-info h1 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 2px;
+        }
+        .header-info h1 span.cn {
+            font-weight: 400;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-left: 8px;
+        }
+        .header-info .title {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+        .header-info .bio {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            max-width: 560px;
+        }
+        .links {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            transition: all 0.2s;
+        }
+        .links a:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            opacity: 1;
+        }
+        .links a svg { width: 14px; height: 14px; }
+
+        /* ── Job Market Banner ── */
+        .banner {
+            max-width: var(--max-w);
+            margin: 28px auto 0;
+            padding: 0 24px;
+        }
+        .banner-inner {
+            background: linear-gradient(135deg, var(--accent-light), #FFF8F0);
+            border: 1px solid #F0D6D6;
+            border-radius: var(--radius);
+            padding: 16px 22px;
+            font-size: 0.9rem;
+            color: #7A2020;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .banner-inner strong { color: var(--accent); }
+
+        /* ── Main Content ── */
+        .content {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 36px 24px 80px;
+        }
+
+        .section-title {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--text);
+            display: inline-block;
+        }
+
+        /* ── Publications ── */
+        .year-label {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 32px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .year-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .pub-list { list-style: none; }
+        .pub-item {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+            align-items: start;
+        }
+        .pub-item:last-child { border-bottom: none; }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 0.93rem;
+            line-height: 1.55;
+            color: var(--text);
+        }
+        .pub-authors {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 3px;
+            line-height: 1.6;
+        }
+        .pub-authors .me { font-weight: 700; color: var(--text); }
+
+        .pub-venue {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 3px 10px;
+            border-radius: 100px;
+            margin-top: 6px;
+            white-space: nowrap;
+            letter-spacing: 0.02em;
+        }
+        .pub-oral {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #D97706;
+            background: #FFFBEB;
+            padding: 2px 8px;
+            border-radius: 100px;
+            margin-left: 6px;
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 6px;
+            align-items: start;
+            padding-top: 2px;
+        }
+        .pub-links a {
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+        .pub-links a:hover { border-color: var(--accent); color: var(--accent); opacity: 1; }
+
+        /* ── Service ── */
+        .service-section { margin-top: 48px; }
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .service-tag {
+            font-size: 0.82rem;
+            padding: 5px 14px;
+            background: var(--tag-bg);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.8rem;
+            color: #aaa;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .header-inner { flex-direction: column; align-items: center; text-align: center; }
+            .avatar { width: 120px; height: 120px; }
+            .links { justify-content: center; }
+            .pub-item { grid-template-columns: 1fr; }
+            .pub-links { justify-content: flex-start; }
+            .header-info .bio { max-width: 100%; }
+        }
+
+        /* ── Animations ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header-inner { animation: fadeUp 0.6s ease-out; }
+        .content { animation: fadeUp 0.6s ease-out 0.15s both; }
+    </style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<div class="header">
+    <div class="header-inner">
+        <img class="avatar" src="junfeng.jpg" alt="Junfeng Guo">
+        <div class="header-info">
+            <h1>Junfeng Guo <span class="cn">(国珺峰)</span></h1>
+            <div class="title">Research Associate · University of Maryland, College Park</div>
+            <p class="bio">
+                I work with <a href="http://www.cs.umd.edu/~heng/">Prof. Heng Huang</a> at the intersection of <strong>deep learning</strong>, <strong>computer vision</strong>, and <strong>privacy &amp; security</strong>. My research focuses on making AI systems more practically usable, trustworthy, and predictable. I received my Ph.D. in Computer Science from UT Dallas, advised by Dr. Cong Liu and Dr. Ang Li.
+            </p>
+            <div class="links">
+                <a href="mailto:gjf2023@umd.edu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 4 10 8 10-8"/></svg>
+                    Email
+                </a>
+                <a href="https://scholar.google.co.jp/citations?user=TqblqYcAAAAJ&hl=ja">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM1.5 4.5 12 13l6-4.5"/><path d="m22.5 4.5-2 1.5V3h-4l-4.5 3.5L22.5 4.5Z"/></svg>
+                    Scholar
+                </a>
+                <a href="https://twitter.com/Junfeng27879808">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    Twitter
+                </a>
+                <a href="mailto:gjf199509236817@gmail.com">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 4 10 8 10-8"/></svg>
+                    Gmail
+                </a>
             </div>
-            <div class="section">
-                <h3>
-                  I'm on the Job Market Now !
-                </h3>
-                <p>
-                  If you have any openings <b>Research Opportunities</b> related to <b>Deep Learning, Machine Leanring, Data Mining and Computer Vision<b>, I'd love to get in contact.
-                </p>
-                <h3>Biography</h3>
-                <p> I am a Research Associate at the University of Maryland, College Park working with <a href="http://www.cs.umd.edu/~heng/">Brendan Iribe Endowed Professor. Heng Huang</a>. I conduct research at the intersection of Deep Learning, Computer Vision and Privacy & Security. My ongoing work focuses on making AI systems more practically usable and Predictablity.  
-                
-                </p><p>	I received my Ph.D for Computer Science at UTDallas, working with Dr.Cong Liu and Dr.Ang Li.  (<a href="https://www.uestc.edu.cn/">UESTC</a>). 
+        </div>
+    </div>
+</div>
 
-                </p><div class="section">
-                    <h3>Publication</h3>
-			<h3>2025</h3>
-			
-	
-                      	<ul class="paper">
-				<li><span class="papertitle">Backdoor in Seconds: Unlocking Backdoor Vulnerabilities for Pre-trained Large Model via Model Editing
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	 Dongliang Guo, Mengxuan Hu, Zihan Guan, Junfeng Guo, Thomas Hartvigsen and Sheng Li
-				<br>
-                            	<b>CIKM 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
+<!-- ══════════ JOB MARKET BANNER ══════════ -->
+<div class="banner">
+    <div class="banner-inner">
+        <span style="font-size:1.1rem">📢</span>
+        <span><strong>I'm on the job market!</strong> Looking for research opportunities in Deep Learning, Machine Learning, Data Mining, and Computer Vision. Feel free to reach out.</span>
+    </div>
+</div>
 
-				<li><span class="papertitle">WWW.Risk.GPT: Preventing Unauthorized Real-Time
-Retrieval by Large Language Models 
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	 Eason Zhu, Yizhu, Junfeng Guo, Heng Huang, Hanqing Guo, Judy Zhuang <br>
-                            	<b>EMNLP 2025； Poster: USENIX Security 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				
-				<li><span class="papertitle">FedContinualNovel: Federate Continual Learning for Novel Class Discovery  
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	 Lixu Wang, Chenxi Liu, Junfeng Guo, Qingqing Ye, Heng Huang, Haibo Hu, Wei Dong <br>
-                            	<b>ICCV 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				
-				<li><span class="papertitle">A Watermark for Auto-Regressive Speech Recognition Model (Oral)
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	 Yifan Wu, Ruibo Chen, Miles George, Junfeng Guo, Heng Huang <br>
-                            	<b>InterSpeech 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">Improved Unbiased Watermark for LLM
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	Ruibo Chen, Yifan Wu, Junfeng Guo, Heng Huang <br>
-                            	<b>ACL 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">Asymetric Multi-linguistic Conflict for Machine Translation
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	Zheng Tong, Yan Wen, Junfeng Guo, Heng Huang <br>
-                            	<b>ACL Findings 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">De-Mark: Detecting, Removing and Exploiting Watermark for LLMs
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	Ruibo Chen, Yihan Wu, Junfeng Guo, Heng Huang <br>
-                            	<b>ICML 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">Towards Sample-specific Backdoor Attack with Clean Labels via Attribute Trigger
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	Yiming Li, Mingyan Zhu, Junfeng Guo, Tao Wei, Shu-Tao Xia, Zhan Qin <br>
-                            	<b>TDSC 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">SleeperMark: Towards Robust Watermark against Fine-Tuning Text-to-image Diffusion Models
- 	</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                        	Zilan Wang, Junfeng Guo, Jiacheng Zhu, Yiming Li, Heng Huang, Muhao Chen, Zhengzhong Tu <br>
-                            	<b>CVPR 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">Audio Watermark: Dynamic and Harmless Watermark for
-	Black-box Voice Dataset Copyright Protection</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                        	Hanqing Guo, Junfeng Guo (Co-first Author), Heng Huang, Qiben Yan, Li Xiao <br>
-                            	<b>USENIX Security 2025</b>.
-                            	<div id="uss-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">Pattern Mark: A Watermark for Order-Agnostic Language Models </span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	Ruibo Chen, Yihan Wu, Yanshuo Chen, Chenxi Liu, Junfeng Guo, Heng Huang <br>
-                            	<b>ICLR 2025</b>.
-                            	<div id="iclr-2025-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">Mind Control through Causal Inference: Predicting Clean Images from Poisoned Data </span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                        	Mengxuan Hu, Zihan Guan, Yi Zeng, Junfeng Guo, Zhongliang Zhou, Jielu Zhang, Ruoxi Jia, Anil Kumar Vullikanti, Sheng Li<br>
-                            	<b>ICLR 2025</b>.
-                            	<div id="iclr-2025-2" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-			<h3>2024</h3>
-                      		<ul class="paper">
-				<li><span class="papertitle">BBCaL: Black-box Backdoor Detection under the Causality Lens</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         Mengxuan Hu, Zihan Guan, Junfeng Guo, Zhongliang Zhou, Jielu Zhang, Sheng Li <br>
-                            <b>TMLR 2024</b>.
-                            <div id="TMLR" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">ZeroMark: Towards Dataset Ownership Verification without the Verification Watermark Disclosure</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                         	Junfeng Guo, George Li, Ruibo Chen, Yihan Wu, Chenxi Liu, Heng Huang <br>
-                            	<b>NeurIPS 2024</b>.
-                            	<div id="NeurIPS-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">Training A Secure Model against Data-Free Model Extraction</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                          	Zhenyi Wang, Li Shen, Junfeng Guo, Tiehang Duan, Siyu Luan, Tongliang Liu and  Mingchen Gao <br>
-                            	<b>ECCV 2024</b>.
-                            	<div id="ECCV2024-2" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-				<li><span class="papertitle">Few-Shot Class Incremental Learning with Attention-Aware Self-Adaptive Prompt</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                           	Chenxi Liu, Zhenyi Wang, Tianyi Xiong, Ruibo Chen, Yihan Wu, Junfeng Guo, Heng Huang <br>
-                            	<b>ECCV 2024</b>.
-                            	<div id="ECCV2024-1" style="display:none"><pre><code>
-        	</code></pre></div>
-                      		</li>
-                    		<li><span class="papertitle">Your Vision-Language Model Itself Is a Strong Filter: Towards High-Quality Instruction Tuning with Data Selection</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                           	Ruibo Chen, Yihan Wu, Lichang Chen, Guodong Liu, Qi He, Tianyi Xiong,Chenxi Liu, Junfeng Guo, Heng Huang<br>
-                            	<b>ACL 2024 (findings)</b>.
-                            	<div id="advmakeup" style="display:none"><pre><code>
-        	</code></pre></div>
-                      	</li>
-                    		<li><span class="papertitle">DiPMark: A Stealthy, Provable Robust Watermark for LLM</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                           	Yihan Wu, Zhengmian Hu, Junfeng Guo, Hongyang Zhang, Heng Huang<br>
-                            	<b>ICML 2024</b>.
-                            	<div id="advmakeup" style="display:none"><pre><code>
-        	</code></pre></div>
-                      </li>
-                      <h3>2023</h3>
-                      <ul class="paper">
-                        <li><span class="papertitle">Domain Watermark: Effective and Harmless Dataset Copyright Verification is Closed at Hand</span> [&nbsp;<a href="https://openreview.net/pdf?id=o0LFPcoFKnr">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                            <b>Junfeng Guo</b>, George Li, Lixu Wang, Heng Huang, Cong Liu, Bo Li<br>
-                            <b>NeurIPS 2023</b>.
-                            <div id="nips2023" style="display:none"><pre><code>
-         </code></pre></div>
-                        </li>
-                        <li><span class="papertitle">PolicyCleanse: Detecting and Mitigating Trojan Attacks in Reinforcement Learning</span> [&nbsp;<a href="https://openreview.net/pdf?id=o0LFPcoFKnr">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                             <b>Junfeng Guo</b>, Ang Li, Cong Liu <br>
-                             <b>ICCV 2023</b>.
-                             <div id="ICCV2023" style="display:none"><pre><code>
-          </code></pre></div>
-                         </li>
-                        <li><span class="papertitle">MasterKey: Practical Backdoor Attack Against Speaker Verification Systems</span> [&nbsp;<a href="https://openreview.net/pdf?id=o0LFPcoFKnr">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                            Hanqing Guo, Xun Chen, <b>Junfeng Guo</b>, Xiao Li, Qiben Yan <br>
-                            <b>MobiCom 2023</b>.
-                            <div id="mobi2023" style="display:none"><pre><code>
-         </code></pre></div>
-                        </li>
-                        <li><span class="papertitle">Sibling-Attack: Rethinking Transferable Adversarial Attacks against Face Recognition</span> [&nbsp;<a href="https://openreview.net/pdf?id=o0LFPcoFKnr">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                            Zexin Li, Bangjie Yin, Taiping Yao, <b>Junfeng Guo</b>, Shouhong Ding, Simin Chen, Cong Liu <br>
-                             <b>CVPR 2023</b>.
-                             <div id="Sibling-Attack" style="display:none"><pre><code>
-          </code></pre></div>
-                         </li>
-                        <li><span class="papertitle">SCALE-UP: An Efficient Black-box Input-level Backdoor Detection via Analyzing Scaled Prediction Consistency</span> [&nbsp;<a href="https://openreview.net/pdf?id=o0LFPcoFKnr">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                           <b>Junfeng Guo</b>, Yiming Li, Xun Chen, Hanqing Guo, Lichao Sun and Cong Liu<br>
-                            <b>ICLR 2023</b>.
-                            <div id="scale-up" style="display:none"><pre><code>
-         </code></pre></div>
-                        </li>
+<!-- ══════════ CONTENT ══════════ -->
+<div class="content">
+
+    <h2 class="section-title">Publications</h2>
+
+    <!-- ── 2025 ── -->
+    <div class="year-label">2025</div>
+    <ul class="pub-list">
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Backdoor in Seconds: Unlocking Backdoor Vulnerabilities for Pre-trained Large Model via Model Editing</div>
+                <div class="pub-authors">Dongliang Guo, Mengxuan Hu, Zihan Guan, <span class="me">Junfeng Guo</span>, Thomas Hartvigsen, Sheng Li</div>
+                <span class="pub-venue">CIKM 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">WWW.Risk.GPT: Preventing Unauthorized Real-Time Retrieval by Large Language Models</div>
+                <div class="pub-authors">Eason Zhu, Yizhu, <span class="me">Junfeng Guo</span>, Heng Huang, Hanqing Guo, Judy Zhuang</div>
+                <span class="pub-venue">EMNLP 2025</span><span class="pub-venue" style="margin-left:4px">USENIX Security 2025 Poster</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">FedContinualNovel: Federated Continual Learning for Novel Class Discovery</div>
+                <div class="pub-authors">Lixu Wang, Chenxi Liu, <span class="me">Junfeng Guo</span>, Qingqing Ye, Heng Huang, Haibo Hu, Wei Dong</div>
+                <span class="pub-venue">ICCV 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">A Watermark for Auto-Regressive Speech Recognition Model</div>
+                <div class="pub-authors">Yifan Wu, Ruibo Chen, Miles George, <span class="me">Junfeng Guo</span>, Heng Huang</div>
+                <span class="pub-venue">InterSpeech 2025</span><span class="pub-oral">Oral</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Improved Unbiased Watermark for LLM</div>
+                <div class="pub-authors">Ruibo Chen, Yifan Wu, <span class="me">Junfeng Guo</span>, Heng Huang</div>
+                <span class="pub-venue">ACL 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Asymmetric Multi-linguistic Conflict for Machine Translation</div>
+                <div class="pub-authors">Zheng Tong, Yan Wen, <span class="me">Junfeng Guo</span>, Heng Huang</div>
+                <span class="pub-venue">ACL Findings 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">De-Mark: Detecting, Removing and Exploiting Watermark for LLMs</div>
+                <div class="pub-authors">Ruibo Chen, Yihan Wu, <span class="me">Junfeng Guo</span>, Heng Huang</div>
+                <span class="pub-venue">ICML 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Towards Sample-specific Backdoor Attack with Clean Labels via Attribute Trigger</div>
+                <div class="pub-authors">Yiming Li, Mingyan Zhu, <span class="me">Junfeng Guo</span>, Tao Wei, Shu-Tao Xia, Zhan Qin</div>
+                <span class="pub-venue">TDSC 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">SleeperMark: Towards Robust Watermark against Fine-Tuning Text-to-image Diffusion Models</div>
+                <div class="pub-authors">Zilan Wang, <span class="me">Junfeng Guo</span>, Jiacheng Zhu, Yiming Li, Heng Huang, Muhao Chen, Zhengzhong Tu</div>
+                <span class="pub-venue">CVPR 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Audio Watermark: Dynamic and Harmless Watermark for Black-box Voice Dataset Copyright Protection</div>
+                <div class="pub-authors">Hanqing Guo, <span class="me">Junfeng Guo</span> (Co-first), Heng Huang, Qiben Yan, Li Xiao</div>
+                <span class="pub-venue">USENIX Security 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Pattern Mark: A Watermark for Order-Agnostic Language Models</div>
+                <div class="pub-authors">Ruibo Chen, Yihan Wu, Yanshuo Chen, Chenxi Liu, <span class="me">Junfeng Guo</span>, Heng Huang</div>
+                <span class="pub-venue">ICLR 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Mind Control through Causal Inference: Predicting Clean Images from Poisoned Data</div>
+                <div class="pub-authors">Mengxuan Hu, Zihan Guan, Yi Zeng, <span class="me">Junfeng Guo</span>, Zhongliang Zhou, Jielu Zhang, Ruoxi Jia, Anil Kumar Vullikanti, Sheng Li</div>
+                <span class="pub-venue">ICLR 2025</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
     </ul>
 
-                    <h3>2022</h3>
-                      <ul class="paper">
+    <!-- ── 2024 ── -->
+    <div class="year-label">2024</div>
+    <ul class="pub-list">
 
-                        <li><span class="papertitle">AEVA: Black-box Backdoor Detection Using Adversarial Extreme Value Analysis</span> [&nbsp;<a href="https://openreview.net/pdf?id=OM_lYiHXiCL">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                           <b>Junfeng Guo</b>, Ang Li and Cong Liu<br>
-                            <b>ICLR 2022</b>.
-                            <div id="aeva" style="display:none"><pre><code>
-@inproceedings{
-guo2022aeva,
-title={{AEVA}: Black-box Backdoor Detection Using Adversarial Extreme Value Analysis},
-author={Junfeng Guo and Ang Li and Cong Liu},
-booktitle={International Conference on Learning Representations},
-year={2022},
-url={https://openreview.net/forum?id=OM_lYiHXiCL}
-}              </code></pre></div>
-                        </li>
-                      
-
-
-               <li><span class="papertitle">Neural Mean Discrepancy for Efficient Out-of-Distribution Detection</span> [&nbsp;<a href="https://arxiv.org/pdf/2104.11408.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                           Xin Dong, <b>Junfeng Guo</b>, Ang Li, Wei-Te Ting, Cong Liu, H.T. Kung1<br>
-                            <b>CVPR 2022</b>.
-                            <div id="lightweight" style="display:none"><pre><code>
-@misc{dong2021lightweight,
-      title={Lightweight Detection of Out-of-Distribution and Adversarial Samples via Channel Mean Discrepancy}, 
-      author={Xin Dong and Junfeng Guo and Wei-Te Ting and H. T. Kung},
-      year={2021},
-      eprint={2104.11408},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}            </code></pre></div>
-                     </li>
-		</ul>
-                    <h3>2021</h3>
-                      <ul class="paper">
-
-                    	 <li><span class="papertitle">Adv-Makeup: A New Imperceptible and Transferable Attack on Face Recognition</span> [&nbsp;<a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                            Bangjie Yin, Wenxuan Wang, Taiping Yao, <b>Junfeng Guo</b>, Zelun Kong, Shouhong Ding, Jilin Li and Cong Liu<br>
-                            <b>IJCAI 2021</b>.
-                            <div id="advmakeup" style="display:none"><pre><code>
-@misc{yin2021advmakeup,
-      title={Adv-Makeup: A New Imperceptible and Transferable Attack on Face Recognition}, 
-      author={Bangjie Yin and Wenxuan Wang and Taiping Yao and Junfeng Guo and Zelun Kong and Shouhong Ding and Jilin Li and Cong Liu},
-      year={2021},
-      eprint={2105.03162},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}               </code></pre></div>
-                        </li>
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-
-		    
-                      <li><span class="papertitle">PredCoin: Defense against Query-based Hard-label Attack</span> [&nbsp;<a href="https://arxiv.org/pdf/2102.02923.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                          Junfeng Guo, Yaswanth Yadlapalli, Thiele Lothar, Ang Li, Cong Liu<br>
-                            <b>Arxiv</b>.
-                            <div id="predcoin" style="display:none"><pre><code>
-@misc{guo2021predcoin,
-      title={PredCoin: Defense against Query-based Hard-label Attack}, 
-      author={Junfeng Guo and Yaswanth Yadlapalli and Thiele Lothar and Ang Li and Cong Liu},
-      year={2021},
-      eprint={2102.02923},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR}
-}      </code></pre></div>
-                        </li>
-
-                    </ul>	
-                    
-                    <h3>2020</h3>
-                    <ul class="paper">
-      			<li><span class="papertitle">PoisHygiene: Detecting and Mitigating Poisoning Attacks in Neural Networks</span> [&nbsp;<a href="https://arxiv.org/abs/2003.11110">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                            Junfeng Guo, Cong Liu<br>
-                            <b>Arxiv</b>.
-                            <div id="prac" style="display:none"><pre><code>
-@misc{guo2020poishygiene,
-      title={PoisHygiene: Detecting and Mitigating Poisoning Attacks in Neural Networks}, 
-      author={Junfeng Guo and Ting Wang and Cong Liu},
-      year={2020},
-      eprint={2003.11110},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR}
-}     </code></pre></div>
-                        </li>
- 
-
-                        <li><span class="papertitle">LINTS: A Learning-driven Testbed for Intelligent Scheduling in Embedded Systems</span> [&nbsp;<a href="https://arxiv.org/abs/2007.05136">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                            Zelun Kong, Yaswanth Yadlapalli, Soroush Bateni, Junfeng Guo, Cong Liu<br>
-                            <b>Arxiv</b>.
-                            <div id="prac" style="display:none"><pre><code>
-@misc{kong2020lintsrt,
-      title={LINTS^RT: A Learning-driven Testbed for Intelligent Scheduling in Embedded Systems}, 
-      author={Zelun Kong and Yaswanth Yadlapalli and Soroush Bateni and Junfeng Guo and Cong Liu},
-      year={2020},
-      eprint={2007.05136},
-      archivePrefix={arXiv},
-      primaryClass={cs.OS}
-}              </code></pre></div>
-                        </li>
-
-                        <li><span class="papertitle">Deep Partial Updating</span> [&nbsp;<a href="https://arxiv.org/abs/2007.03071">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                            Zhongnan Qu, Junfeng Guo, Cong Liu<br>
-                            <b>Arxiv</b>.
-                            <div id="prac" style="display:none"><pre><code>
-@misc{qu2020deep,
-      title={Deep Partial Updating}, 
-      author={Zhongnan Qu and Cong Liu and Junfeng Guo and Lothar Thiele},
-      year={2020},
-      eprint={2007.03071},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}                 </code></pre></div>
-                        </li>
-
-                        <li><span class="papertitle">Practical Poisoning Attack on Deep Neural Networks</span> [&nbsp;<a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123720137.pdf">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;openhybrid&#39;)">Bibtex</a>&nbsp;] <br>
-                            <b>Junfeng Guo</b>, Cong Liu<br>
-                            <b>ECCV 2020</b>.
-                            <div id="prac" style="display:none"><pre><code>
-@inproceedings{guo2020practical,
-  title={Practical Poisoning Attacks on Neural Networks},
-  author={Guo, Junfeng and Liu, Cong},
-  booktitle={European Conference on Computer Vision},
-  pages={142--158},
-  year={2020},
-  organization={Springer}
-}                      </code></pre></div>
-                        </li>
-
-                        <li><span class="papertitle">PhysGAN: Generating Physical-World-Resilient Adversarial Examples for Autonomous Driving</span> [&nbsp;<a href="https://arxiv.org/abs/1907.04449">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;physgan&#39;)">bibtex</a>&nbsp;]<br>
-                            Zelun Kong, <b>Junfeng Guo</b>, Ang Li, Cong Liu<br>
-                            <b>CVPR 2020</b>.
-                            <div id="physgan" style="display:none"><pre><code>
-@misc{kong2019physgan,
-    title={PhysGAN: Generating Physical-World-Resilient Adversarial Examples for Autonomous Driving},
-    author={Zelun Kong and Junfeng Guo and Ang Li and Cong Liu},
-    year={2019},
-    eprint={1907.04449},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
-}
-                                </code></pre></div>
-                         </li>
-
-        
- <li><span class="papertitle">DeepBillboard: Systematic Physical-World Testing of Autonomous Driving Systems</span> [&nbsp;<a href="https://dl.acm.org/doi/pdf/10.1145/3377811.3380422">PDF</a>&nbsp;] [&nbsp;<a class="link" href="javascript:showbib(&#39;pcc&#39;)">Bibtex</a>&nbsp;]<br>
-
-                             Husheng Zhou, Wei Li, Zelun Kong, <b>Junfeng Guo</b>, Yuqun Zhang, Bei Yu, Lingming Zhang, Cong Liu<br>
-                            <b>ICSE 2020</b>
-
-                            <div id="deepbill" style="display:none"><pre><code>
-@inproceedings{10.1145/3377811.3380422,
-author = {Zhou, Husheng and Li, Wei and Kong, Zelun and Guo, Junfeng and Zhang, Yuqun and Yu, Bei and Zhang, Lingming and Liu, Cong},
-title = {DeepBillboard: Systematic Physical-World Testing of Autonomous Driving Systems},
-year = {2020},
-isbn = {9781450371216},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3377811.3380422},
-doi = {10.1145/3377811.3380422},
-abstract = {Deep Neural Networks (DNNs) have been widely applied in autonomous systems such as self-driving vehicles. Recently, DNN testing has been intensively studied to automatically generate adversarial examples, which inject small-magnitude perturbations into inputs to test DNNs under extreme situations. While existing testing techniques prove to be effective, particularly for autonomous driving, they mostly focus on generating digital adversarial perturbations, e.g., changing image pixels, which may never happen in the physical world. Thus, there is a critical missing piece in the literature on autonomous driving testing: understanding and exploiting both digital and physical adversarial perturbation generation for impacting steering decisions. In this paper, we propose a systematic physical-world testing approach, namely DeepBillboard, targeting at a quite common and practical driving scenario: drive-by billboards. DeepBillboard is capable of generating a robust and resilient printable adversarial billboard test, which works under dynamic changing driving conditions including viewing angle, distance, and lighting. The objective is to maximize the possibility, degree, and duration of the steering-angle errors of an autonomous vehicle driving by our generated adversarial billboard. We have extensively evaluated the efficacy and robustness of DeepBillboard by conducting both experiments with digital perturbations and physical-world case studies. The digital experimental results show that DeepBillboard is effective for various steering models and scenes. Furthermore, the physical case studies demonstrate that DeepBillboard is sufficiently robust and resilient for generating physical-world adversarial billboard tests for real-world driving under various weather conditions, being able to mislead the average steering angle error up to 26.44 degrees. To the best of our knowledge, this is the first study demonstrating the possibility of generating realistic and continuous physical-world tests for practical autonomous driving systems; moreover, DeepBillboard can be directly generalized to a variety of other physical entities/surfaces along the curbside, e.g., a graffiti painted on a wall.},
-booktitle = {Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering},
-pages = {347â€“358},
-numpages = {12},
-location = {Seoul, South Korea},
-series = {ICSE '20}
-}
-                            </code></pre></div>
-                        </li>
-
-
-                    </ul>
-                    
-
-
-                </div>
-
-
-                <div class="section">
-                    <h3>Professional Service</h3>
-                    <ul class="misc">
-                       <!--  <li class="misc0"> Journal Reviewer: 
-                            <ul>
-                                <li> IEEE Transaction on Pattern Analysis and Machine Intelligence (TPAMI) 2019, 2020</li>
-                                <li> IEEE Transactions on Neural Networks and Learning Systems (TNNLS) 2020</li>
-                                <li> IEEE Transaction on Image Processing (TIP) 2017</li>
-                                <li>The Visual Computer Journal (TVCJ) 2016</li>
-                                <li>SPIE Journal of Electronic Imaging (JEI) 2014, 2016, 2018, 2019</li>
-                                <li>IEEE Transaction on Cybernetics 2014</li>
-                                <li>Robotics and Autonomous Systems 2018</li>
-                                <li>Machine Learning 2019</li>
-                            </ul>
-                        </li>
-                        <li class="misc0"> Session Chair:
-                            <ul>
-                                <li>International Joint Conference on Artificial Intelligence (IJCAI) 2021</li>
-                            </ul>
-                        </li>
-                                    
-                        <li class="misc0"> Senior Program Committee:
-                            <ul>
-                                <li>AAAI Conference on Artificial Intelligence (AAAI) 2021</li>
-                                <li>International Joint Conference on Artificial Intelligence (IJCAI) 2020, 2021</li>
-                                <li>International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS) 2020</li>
-                            </ul>
-                        </li> -->
-                        <li class="misc0"> Program Committee or Reviewer:
-                            <ul>
-                                <li>ACL HomeAssociation for
-Computational Linguistics (ACL)</li>
-                                <li>Association for the Advancement of Artificial Intelligence (AAAI)</li>
-                                <li>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</li>
-				<li>European Conference on Computer Vision (ECCV)</li>
-				<li>International Conference on Learning Representation (ICLR)</li>
-                                <li>International Conference on Machine Learning (ICML)</li>
-				<li>Conference on Neural Information Processing Systems (NeurIPS)</li>
-				<li>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) </li>
-                <li> IEEE Transaction on Pattern Analysis and Machine Intelligence (TPAMI) </li>
-                <li> IEEE Transaction on Neural Network Learning System (TNNLS) </li>
-                            </ul>
-                        </li>
-                                <!--
-                                    <li class=misc0> Teaching Assistant for
-                                    <ul>
-                                    <li>Fall 2012: <a href="http://www.cs.umd.edu/class/fall2012/cmsc250">CMSC 250 Discrete Structures</a> (by <a href="http://www.cs.umd.edu/~kruskal">Clyde Kruskal</a> and Thomas Reinhardt)
-                                    </ul>
-                                    <li class=misc0> Graduate Coursework
-                                    <ul>
-                                    <li> <a href="http://www.cs.umd.edu/class/fall2014/cmsc754/">CMSC 754 Computational Geometry</a> by <a href="http://www.cs.umd.edu/~mount/">David Mount</a> (Fall 2014)
-                                    <li> CMSC 828B Advanced Topics in Information Processing by <a href="http://www.umiacs.umd.edu/~lsd/">Larry Davis</a> (Fall 2014)
-                                    <li> <a href="http://www2.math.umd.edu/~rvbalan/TEACHING/AMSC808RSpring2014/index.html">MATH 858R Sparse and Low Rank Representations</a> by <a href="http://www.math.umd.edu/~rvbalan/">Radu Balan</a> (Spring 2014)
-                                    <li> <a href="http://www.cs.umd.edu/~hajiagha/AGT10/AGT14.html">CMSC 858F Algorithmic Game Theory</a> by <a href="http://www.cs.umd.edu/~hajiagha/">Mohammad Hajiaghayi</a> (Spring 2014)
-                                    <li> <a href="">CMSC 828C Statistical Pattern Recognition</a> by <a href="http://www.umiacs.umd.edu/users/rama/">Rama Chellappa</a> (Fall 2013)
-                                    <li> <a href="http://www.cs.umd.edu/~djacobs/CMSC733/CMSC733_13.htm">CMSC 733 Computer Processing of Pictorial Information</a> by <a href="http://www.cs.umd.edu/~djacobs/">David Jacobs</a> (Fall 2013)
-                                    <li> <a href="http://lintool.github.com/MapReduce-course-2013s/">CMSC 828G Data-Intensive Computing with MapReduce</a> by <a href="http://www.umiacs.umd.edu/~jimmylin/">Jimmy Lin</a> (Spring 2013)
-                                    <li> <a href="http://www.cs.umd.edu/~djacobs/CMSC828/CMSC828J_13.htm">CMSC 828J Subspaces and Manifolds for Computer Vision</a> by <a href="http://www.cs.umd.edu/~djacobs/">David Jacobs</a> (Spring 2013)
-                                    <li> CMSC 828G Image Understanding by <a href="http://www.umiacs.umd.edu/users/rama/">Rama Chellappa</a> (Fall 2012)
-                                    <li> <a href="http://www.cs.umd.edu/~elman/660.12/syl.html">CMSC 660 Scientific Computing I</a> by <a href="https://www.cs.umd.edu/users/elman/">Howard Elman</a> (Fall 2012)
-                                    </ul>
-                                    !-->
-                    </ul>
-                </div>
-
-                <div class="foot" style="font-size:10px"></div>
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">BBCaL: Black-box Backdoor Detection under the Causality Lens</div>
+                <div class="pub-authors">Mengxuan Hu, Zihan Guan, <span class="me">Junfeng Guo</span>, Zhongliang Zhou, Jielu Zhang, Sheng Li</div>
+                <span class="pub-venue">TMLR 2024</span>
             </div>
-    
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
 
-    <script type="text/javascript">
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">ZeroMark: Towards Dataset Ownership Verification without the Verification Watermark Disclosure</div>
+                <div class="pub-authors"><span class="me">Junfeng Guo</span>, George Li, Ruibo Chen, Yihan Wu, Chenxi Liu, Heng Huang</div>
+                <span class="pub-venue">NeurIPS 2024</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
 
-        var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-33991125-1']);
-_gaq.push(['_trackPageview']);
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Training A Secure Model against Data-Free Model Extraction</div>
+                <div class="pub-authors">Zhenyi Wang, Li Shen, <span class="me">Junfeng Guo</span>, Tiehang Duan, Siyu Luan, Tongliang Liu, Mingchen Gao</div>
+                <span class="pub-venue">ECCV 2024</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
 
-(function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Few-Shot Class Incremental Learning with Attention-Aware Self-Adaptive Prompt</div>
+                <div class="pub-authors">Chenxi Liu, Zhenyi Wang, Tianyi Xiong, Ruibo Chen, Yihan Wu, <span class="me">Junfeng Guo</span>, Heng Huang</div>
+                <span class="pub-venue">ECCV 2024</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
 
-    </script>
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Your Vision-Language Model Itself Is a Strong Filter: Towards High-Quality Instruction Tuning with Data Selection</div>
+                <div class="pub-authors">Ruibo Chen, Yihan Wu, Lichang Chen, Guodong Liu, Qi He, Tianyi Xiong, Chenxi Liu, <span class="me">Junfeng Guo</span>, Heng Huang</div>
+                <span class="pub-venue">ACL 2024 Findings</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
 
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">DiPMark: A Stealthy, Provable Robust Watermark for LLM</div>
+                <div class="pub-authors">Yihan Wu, Zhengmian Hu, <span class="me">Junfeng Guo</span>, Hongyang Zhang, Heng Huang</div>
+                <span class="pub-venue">ICML 2024</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
 
-</div></body></html>
+    </ul>
 
+    <!-- ── 2023 ── -->
+    <div class="year-label">2023</div>
+    <ul class="pub-list">
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Domain Watermark: Effective and Harmless Dataset Copyright Verification is Closed at Hand</div>
+                <div class="pub-authors"><span class="me">Junfeng Guo</span>, George Li, Lixu Wang, Heng Huang, Cong Liu, Bo Li</div>
+                <span class="pub-venue">NeurIPS 2023</span>
+            </div>
+            <div class="pub-links"><a href="https://openreview.net/pdf?id=o0LFPcoFKnr">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">PolicyCleanse: Detecting and Mitigating Trojan Attacks in Reinforcement Learning</div>
+                <div class="pub-authors"><span class="me">Junfeng Guo</span>, Ang Li, Cong Liu</div>
+                <span class="pub-venue">ICCV 2023</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">MasterKey: Practical Backdoor Attack Against Speaker Verification Systems</div>
+                <div class="pub-authors">Hanqing Guo, Xun Chen, <span class="me">Junfeng Guo</span>, Xiao Li, Qiben Yan</div>
+                <span class="pub-venue">MobiCom 2023</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Sibling-Attack: Rethinking Transferable Adversarial Attacks against Face Recognition</div>
+                <div class="pub-authors">Zexin Li, Bangjie Yin, Taiping Yao, <span class="me">Junfeng Guo</span>, Shouhong Ding, Simin Chen, Cong Liu</div>
+                <span class="pub-venue">CVPR 2023</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">SCALE-UP: An Efficient Black-box Input-level Backdoor Detection via Analyzing Scaled Prediction Consistency</div>
+                <div class="pub-authors"><span class="me">Junfeng Guo</span>, Yiming Li, Xun Chen, Hanqing Guo, Lichao Sun, Cong Liu</div>
+                <span class="pub-venue">ICLR 2023</span>
+            </div>
+            <div class="pub-links"><a href="#">PDF</a></div>
+        </li>
+
+    </ul>
+
+    <!-- ── 2022 ── -->
+    <div class="year-label">2022</div>
+    <ul class="pub-list">
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">AEVA: Black-box Backdoor Detection Using Adversarial Extreme Value Analysis</div>
+                <div class="pub-authors"><span class="me">Junfeng Guo</span>, Ang Li, Cong Liu</div>
+                <span class="pub-venue">ICLR 2022</span>
+            </div>
+            <div class="pub-links"><a href="https://openreview.net/pdf?id=OM_lYiHXiCL">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Neural Mean Discrepancy for Efficient Out-of-Distribution Detection</div>
+                <div class="pub-authors">Xin Dong, <span class="me">Junfeng Guo</span>, Ang Li, Wei-Te Ting, Cong Liu, H.T. Kung</div>
+                <span class="pub-venue">CVPR 2022</span>
+            </div>
+            <div class="pub-links"><a href="https://arxiv.org/pdf/2104.11408.pdf">PDF</a></div>
+        </li>
+
+    </ul>
+
+    <!-- ── 2021 ── -->
+    <div class="year-label">2021</div>
+    <ul class="pub-list">
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Adv-Makeup: A New Imperceptible and Transferable Attack on Face Recognition</div>
+                <div class="pub-authors">Bangjie Yin, Wenxuan Wang, Taiping Yao, <span class="me">Junfeng Guo</span>, Zelun Kong, Shouhong Ding, Jilin Li, Cong Liu</div>
+                <span class="pub-venue">IJCAI 2021</span>
+            </div>
+            <div class="pub-links"><a href="https://arxiv.org/pdf/2105.03162.pdf">PDF</a></div>
+        </li>
+
+    </ul>
+
+    <!-- ── 2020 ── -->
+    <div class="year-label">2020</div>
+    <ul class="pub-list">
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">Practical Poisoning Attack on Deep Neural Networks</div>
+                <div class="pub-authors"><span class="me">Junfeng Guo</span>, Cong Liu</div>
+                <span class="pub-venue">ECCV 2020</span>
+            </div>
+            <div class="pub-links"><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123720137.pdf">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">PhysGAN: Generating Physical-World-Resilient Adversarial Examples for Autonomous Driving</div>
+                <div class="pub-authors">Zelun Kong, <span class="me">Junfeng Guo</span>, Ang Li, Cong Liu</div>
+                <span class="pub-venue">CVPR 2020</span>
+            </div>
+            <div class="pub-links"><a href="https://arxiv.org/abs/1907.04449">PDF</a></div>
+        </li>
+
+        <li class="pub-item">
+            <div>
+                <div class="pub-title">DeepBillboard: Systematic Physical-World Testing of Autonomous Driving Systems</div>
+                <div class="pub-authors">Husheng Zhou, Wei Li, Zelun Kong, <span class="me">Junfeng Guo</span>, Yuqun Zhang, Bei Yu, Lingming Zhang, Cong Liu</div>
+                <span class="pub-venue">ICSE 2020</span>
+            </div>
+            <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3377811.3380422">PDF</a></div>
+        </li>
+
+    </ul>
+
+    <!-- ══════════ SERVICE ══════════ -->
+    <div class="service-section">
+        <h2 class="section-title">Professional Service</h2>
+        <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:12px;">Program Committee / Reviewer</p>
+        <div class="service-grid">
+            <span class="service-tag">ACL</span>
+            <span class="service-tag">AAAI</span>
+            <span class="service-tag">CVPR</span>
+            <span class="service-tag">ECCV</span>
+            <span class="service-tag">ICLR</span>
+            <span class="service-tag">ICML</span>
+            <span class="service-tag">NeurIPS</span>
+            <span class="service-tag">WACV</span>
+            <span class="service-tag">TPAMI</span>
+            <span class="service-tag">TNNLS</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">© 2025 Junfeng Guo · University of Maryland, College Park</div>
+
+</body>
+</html>
 
 
